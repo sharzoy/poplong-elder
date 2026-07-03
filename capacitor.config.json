@@ -1,0 +1,11 @@
+{
+  "appId": "com.paopaolong.elder",
+  "appName": "泡泡龙",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}

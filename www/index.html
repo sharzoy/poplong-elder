@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#2a1060">
+  <title>泡泡龙</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="top-bar">
+      <div class="top-row top-row-1">
+        <span class="top-highscore">最高分: <span id="hud-highscore">0</span></span>
+      </div>
+      <div id="score-big" class="top-row top-row-2">得分: 0</div>
+      <div class="top-row top-row-3">
+        <button id="btn-restart" class="top-btn" type="button">重开</button>
+        <button id="btn-swap" class="top-btn" type="button">换球</button>
+        <button id="btn-home-hud" class="top-btn" type="button">主页</button>
+      </div>
+    </header>
+
+    <main class="game-board">
+      <canvas id="game-canvas"></canvas>
+    </main>
+  </div>
+
+  <div id="screen-home" class="overlay overlay-visible">
+    <div class="panel panel-home">
+      <h1 class="title">泡泡龙</h1>
+      <div class="home-highscore-card">
+        <span class="home-highscore-icon" aria-hidden="true">🏆</span>
+        <div class="home-highscore-body">
+          <p class="home-highscore-label">最高得分</p>
+          <p id="home-highscore" class="home-highscore-value">0</p>
+        </div>
+      </div>
+      <p class="subtitle">拖动瞄准，松手发射。3 个同色相连消除，悬空泡泡掉落加分。每发射 4 次顶行下压，泡泡压到红线即结束。</p>
+      <button id="btn-continue" class="btn btn-primary btn-large" type="button">开始游戏</button>
+      <button id="btn-sound-home" class="btn btn-secondary btn-large" type="button">音效：开</button>
+    </div>
+  </div>
+
+  <div id="screen-over" class="overlay">
+    <div class="panel panel-over">
+      <h2 class="level-title">游戏结束</h2>
+      <p id="over-score" class="level-score">本次得分：0</p>
+      <p id="over-highscore" class="level-summary"></p>
+      <button id="btn-retry" class="btn btn-primary btn-large" type="button">再玩一次</button>
+      <button id="btn-home" class="btn btn-secondary btn-large" type="button">返回首页</button>
+    </div>
+  </div>
+
+  <script src="js/audio.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

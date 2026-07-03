@@ -1,0 +1,19 @@
+{
+  "name": "paopaolong-elder",
+  "version": "1.0.0",
+  "description": "泡泡龙 - 适合长辈的休闲射击消除游戏",
+  "scripts": {
+    "sync": "npx cap sync android",
+    "icons": "powershell -ExecutionPolicy Bypass -File scripts/generate-android-icons.ps1",
+    "open:android": "npx cap open android",
+    "serve": "npx --yes serve www -p 8080"
+  },
+  "capacitor": {
+    "platforms": ["android"]
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  }
+}
